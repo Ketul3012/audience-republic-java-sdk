@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/audience-republic/audience-republic-java-sdk.audience-republic.main.iml" filepath="$PROJECT_DIR$/.idea/modules/audience-republic/audience-republic-java-sdk.audience-republic.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/audience-republic-java-sdk.lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/audience-republic-java-sdk.lib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/audience-republic-java-sdk.lib.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/audience-republic-java-sdk.lib.test.iml" />
     </modules>
   </component>
 </project>
