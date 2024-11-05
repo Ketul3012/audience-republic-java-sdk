@@ -77,7 +77,7 @@ publishing {
 
     repositories {
         maven {
-            name = "MavenPackages"
+            name = "Maven Packages"
             url = uri("https://oss.sonatype.org/content/repositories/releases/")
             credentials {
                 username = System.getenv("MAVEN_USERNAME")
