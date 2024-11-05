@@ -77,11 +77,11 @@ publishing {
 
     repositories {
         maven {
-            name = "Maven Packages"
-            url = uri("https://oss.sonatype.org/content/repositories/releases/")
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Ketul3012/audience-republic-java-sdk")
             credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
