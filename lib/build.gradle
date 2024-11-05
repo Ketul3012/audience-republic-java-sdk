@@ -47,7 +47,6 @@ publishing {
             groupId = 'com.audience'          // Replace with your package's group ID
             artifactId = 'audience-republic'    // Replace with your package's artifact ID
             version = '1.0.2'                  // Define your package version
-
             pom {
                 name = 'Audience Republic Java SDK'
                 description = 'Description of your project'
@@ -72,9 +71,6 @@ publishing {
                     url = 'https://github.com/Ketul3012/audience-republic-java-sdk'
                 }
             }
-        }
-        gpr(MavenPublication) {
-            from(components.java)
         }
     }
 
