@@ -17,6 +17,10 @@ repositories {
     mavenCentral()
 }
 
+group = 'com.audience'
+version = '1.0.4'
+description = 'Java SDK to interact with Audience Republic API'
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api libs.commons.math3
@@ -44,12 +48,9 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
-            groupId = 'com.audience'          // Replace with your package's group ID
-            artifactId = 'audience-republic'    // Replace with your package's artifact ID
-            version = '1.0.3'                  // Define your package version
             pom {
                 name = 'Audience Republic Java SDK'
-                description = 'Description of your project'
+                description = 'Java SDK to interact with Audience Republic API'
                 url = 'https://github.com/Ketul3012/audience-republic-java-sdk'
 
                 licenses {
