@@ -1,0 +1,52 @@
+package com.audience.republic.request;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import lombok.Builder;
+import lombok.Data;
+import org.joda.time.DateTime;
+
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.List;
+
+@Data
+@Builder
+public class CreateEventOrdersRequest implements Serializable {
+
+    @SerializedName("id")
+    @Expose
+    private String id;
+    @SerializedName("purchase-date")
+    @Expose
+    private DateTime purchaseDate;
+    @SerializedName("purchaser")
+    @Expose
+    private CreateContactsRequest purchaser;
+    @SerializedName("purchaser-id")
+    @Expose
+    private String purchaserId;
+    @SerializedName("currency")
+    @Expose
+    private String currency;
+    @SerializedName("total")
+    @Expose
+    private Integer total;
+    @SerializedName("fees")
+    @Expose
+    private Integer fees;
+    @SerializedName("taxes")
+    @Expose
+    private Integer taxes;
+    @SerializedName("status")
+    @Expose
+    private String status;
+    @SerializedName("event-id")
+    @Expose
+    private String eventId;
+    @SerializedName("tickets")
+    @Expose
+    private List<CreateTicketsRequest> tickets;
+    @Serial
+    private final static long serialVersionUID = -7409045530739674678L;
+}
