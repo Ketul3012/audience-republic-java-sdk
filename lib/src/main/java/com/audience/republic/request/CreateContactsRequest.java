@@ -60,7 +60,7 @@ public class CreateContactsRequest implements Serializable {
     private String country;
     @SerializedName("tags")
     @Expose
-    private List<String> tags = new ArrayList<>();
+    private List<String> tags;
     @Serial
     private final static long serialVersionUID = 6294356973643074561L;
 }
