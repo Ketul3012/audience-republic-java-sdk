@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
@@ -35,5 +36,53 @@ dependencies {
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId = 'com.audience'          // Replace with your package's group ID
+            artifactId = 'audience-republic'    // Replace with your package's artifact ID
+            version = '1.0.0'                  // Define your package version
+
+            pom {
+                name = 'Audience Republic Java SDK'
+                description = 'Description of your project'
+                url = 'https://github.com/Ketul3012/audience-republic-java-sdk'
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'https://www.apache.org/licenses/LICENSE-2.0'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'Ketul3012'
+                        name = 'Ketul Patel'
+                        email = 'ketulpatel3012@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/Ketul3012/audience-republic-java-sdk.git'
+                    developerConnection = 'scm:git:ssh://github.com:Ketul3012/audience-republic-java-sdk.git'
+                    url = 'https://github.com/Ketul3012/audience-republic-java-sdk'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Ketul3012/audience-republic-java-sdk")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.token") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
 }
