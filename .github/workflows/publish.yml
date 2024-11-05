@@ -20,17 +20,12 @@ jobs:
           java-version: '21'
           cache: 'maven'
 
-      - name: Create settings.xml
+      - name: Copy settings.xml to .m2 folder
         run: |
-            echo "<settings>" > settings.xml
-            echo "  <servers>" >> settings.xml
-            echo "    <server>" >> settings.xml
-            echo "      <id>central</id>" >> settings.xml
-            echo "      <username>${{ secrets.MAVEN_USERNAME }}</username>" >> settings.xml
-            echo "      <password>${{ secrets.MAVEN_USERNAME }}</password>" >> settings.xml
-            echo "    </server>" >> settings.xml
-            echo "  </servers>" >> settings.xml
-            echo "</settings>" >> settings.xml
+            cp settings.xml ~/.m2/settings.xml
 
       - name: Publish to Sonatype Packages
-        run: mvn clean deploy
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_USERNAME }}
+        run: mvn clean deploy --settings ~/.m2/settings.xml
