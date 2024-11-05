@@ -20,6 +20,9 @@ jobs:
           java-version: '21'
           cache: 'maven'
 
+      - name: Show settings.xml
+        run: cat settings.xml
+
       - name: Publish to Sonatype Packages
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
