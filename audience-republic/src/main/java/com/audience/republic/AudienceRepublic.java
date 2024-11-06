@@ -4,8 +4,8 @@ import com.audience.republic.enums.AudienceRepublicVersions;
 
 public class AudienceRepublic {
 
-    public static AudienceRepublicService getClient(AudienceRepublicVersions audienceRepublicVersions, String token){
-        return new AudienceRepublicServiceImpl(audienceRepublicVersions,token);
+    public static AudienceRepublicService getClient(AudienceRepublicVersions audienceRepublicVersions, String provider, String token){
+        return new AudienceRepublicServiceImpl(provider,audienceRepublicVersions,token);
     }
 
 }

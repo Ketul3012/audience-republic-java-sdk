@@ -15,47 +15,49 @@ class AudienceRepublicServiceImpl implements AudienceRepublicService {
 
     private final ApiService apiService;
 
-    public AudienceRepublicServiceImpl(AudienceRepublicVersions audienceRepublicVersions, String token){
+    private final String DEFAULT_PROVIDER;
+    public AudienceRepublicServiceImpl(String provider, AudienceRepublicVersions audienceRepublicVersions, String token){
         apiService = ApiClient.getClient(audienceRepublicVersions,token);
+        DEFAULT_PROVIDER=provider;
     }
 
     @Override
-    public StatusResponse status(String provider) throws IOException {
-        return apiService.status(provider).execute().body();
+    public StatusResponse status() throws IOException {
+        return apiService.status(DEFAULT_PROVIDER).execute().body();
     }
 
     @Override
-    public SuccessResponse createContacts(String provider, List<CreateContactsRequest> createContactsRequests) throws IOException {
-        return apiService.createContacts(provider, createContactsRequests).execute().body();
+    public SuccessResponse createContacts(List<CreateContactsRequest> createContactsRequests) throws IOException {
+        return apiService.createContacts(DEFAULT_PROVIDER, createContactsRequests).execute().body();
     }
 
     @Override
-    public CreateMailingListResponse createMailingList(String provider, CreateMailingListRequest createMailingListRequest) throws IOException {
-        return apiService.createMailingList(provider, createMailingListRequest).execute().body();
+    public CreateMailingListResponse createMailingList(CreateMailingListRequest createMailingListRequest) throws IOException {
+        return apiService.createMailingList(DEFAULT_PROVIDER, createMailingListRequest).execute().body();
     }
 
     @Override
-    public SuccessResponse createEvents(String provider, List<CreateEventsRequest> requests) throws IOException {
-        return apiService.createEvents(provider, requests).execute().body();
+    public SuccessResponse createEvents(List<CreateEventsRequest> requests) throws IOException {
+        return apiService.createEvents(DEFAULT_PROVIDER, requests).execute().body();
     }
 
     @Override
-    public SuccessResponse createEventsOrders(String provider, List<CreateEventOrdersRequest> requests) throws IOException {
-        return apiService.createEventsOrders(provider, requests).execute().body();
+    public SuccessResponse createEventsOrders(List<CreateEventOrdersRequest> requests) throws IOException {
+        return apiService.createEventsOrders(DEFAULT_PROVIDER, requests).execute().body();
     }
 
     @Override
-    public SuccessResponse createTicketClasses(String provider, List<CreateTicketsClassRequest> requests) throws IOException {
-        return apiService.createTicketClasses(provider, requests).execute().body();
+    public SuccessResponse createTicketClasses(List<CreateTicketsClassRequest> requests) throws IOException {
+        return apiService.createTicketClasses(DEFAULT_PROVIDER, requests).execute().body();
     }
 
     @Override
-    public SuccessResponse createTicketOrders(String provider, List<CreateTicketOrdersRequest> requests) throws IOException {
-        return apiService.createTicketOrders(provider, requests).execute().body();
+    public SuccessResponse createTicketOrders(List<CreateTicketOrdersRequest> requests) throws IOException {
+        return apiService.createTicketOrders(DEFAULT_PROVIDER, requests).execute().body();
     }
 
     @Override
-    public SuccessResponse createTickets(String provider, List<CreateTicketsRequest> requests) throws IOException {
-        return apiService.createTickets(provider, requests).execute().body();
+    public SuccessResponse createTickets(List<CreateTicketsRequest> requests) throws IOException {
+        return apiService.createTickets(DEFAULT_PROVIDER, requests).execute().body();
     }
 }

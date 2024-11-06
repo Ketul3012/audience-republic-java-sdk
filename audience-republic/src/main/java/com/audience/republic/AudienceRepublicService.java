@@ -13,20 +13,20 @@ import java.util.List;
 
 public interface AudienceRepublicService {
 
-    StatusResponse status(String provider) throws IOException;
+    StatusResponse status() throws IOException;
 
-    SuccessResponse createContacts(String provider,List<CreateContactsRequest> createContactsRequests) throws IOException;
+    SuccessResponse createContacts(List<CreateContactsRequest> createContactsRequests) throws IOException;
 
-    CreateMailingListResponse createMailingList(String provider, CreateMailingListRequest createMailingListRequest) throws IOException;
+    CreateMailingListResponse createMailingList(CreateMailingListRequest createMailingListRequest) throws IOException;
 
-    SuccessResponse createEvents(String provider, List<CreateEventsRequest> requests) throws IOException;
+    SuccessResponse createEvents(List<CreateEventsRequest> requests) throws IOException;
 
-    SuccessResponse createEventsOrders(String provider, List<CreateEventOrdersRequest> requests) throws IOException;
+    SuccessResponse createEventsOrders(List<CreateEventOrdersRequest> requests) throws IOException;
 
-    SuccessResponse createTicketClasses(String provider, List<CreateTicketsClassRequest> requests) throws IOException;
+    SuccessResponse createTicketClasses(List<CreateTicketsClassRequest> requests) throws IOException;
 
-    SuccessResponse createTicketOrders(String provider, List<CreateTicketOrdersRequest> requests) throws IOException;
+    SuccessResponse createTicketOrders(List<CreateTicketOrdersRequest> requests) throws IOException;
 
-    SuccessResponse createTickets(String provider, List<CreateTicketsRequest> requests) throws IOException;
+    SuccessResponse createTickets(List<CreateTicketsRequest> requests) throws IOException;
 
 }
