@@ -50,9 +50,6 @@ public class CreateTicketOrdersRequest implements Serializable {
     @SerializedName("ticket-class-id")
     @Expose
     private String ticketClassId;
-    @SerializedName("tickets")
-    @Expose
-    private List<CreateTicketsRequest> tickets;
     @Serial
     private final static long serialVersionUID = -7409045530739674678L;
 }
