@@ -17,10 +17,12 @@ public class CreateMediaRequest implements Serializable {
     private String id;
     @SerializedName("media-type")
     @Expose
-    private String mediaType;
+    @Builder.Default
+    private String mediaType = "image";
     @SerializedName("media-path")
     @Expose
-    private String mediaPath;
+    @Builder.Default
+    private String mediaPath = "https://www.eventliveus.com/long-logo.png";
     @Serial
     private final static long serialVersionUID = 6611114770189833576L;
 }

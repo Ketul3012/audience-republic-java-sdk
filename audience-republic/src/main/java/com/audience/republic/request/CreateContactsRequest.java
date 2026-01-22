@@ -21,46 +21,60 @@ public class CreateContactsRequest implements Serializable {
     private String id;
     @SerializedName("first-name")
     @Expose
-    private String firstName;
+    @Builder.Default
+    private String firstName = "DEFAULT";
     @SerializedName("last-name")
     @Expose
-    private String lastName;
+    @Builder.Default
+    private String lastName = "DEFAULT";
     @SerializedName("gender")
     @Expose
-    private GenderTypes gender;
+    @Builder.Default
+    private GenderTypes gender = GenderTypes.OTHER;
     @SerializedName("birth-date")
     @Expose
-    private DateTime birthDate;
+    @Builder.Default
+    private DateTime birthDate = DateTime.now();
     @SerializedName("mobile-number")
     @Expose
-    private String mobileNumber;
+    @Builder.Default
+    private String mobileNumber= "DEFAULT";
     @SerializedName("email-address")
     @Expose
-    private String emailAddress;
+    @Builder.Default
+    private String emailAddress= "DEFAULT";
     @SerializedName("marketing-opt-in")
     @Expose
-    private Boolean marketingOptIn;
+    @Builder.Default
+    private Boolean marketingOptIn = Boolean.TRUE;
     @SerializedName("street-address")
     @Expose
-    private String streetAddress;
+    @Builder.Default
+    private String streetAddress= "DEFAULT";
     @SerializedName("suburb")
     @Expose
-    private String suburb;
+    @Builder.Default
+    private String suburb= "DEFAULT";
     @SerializedName("postcode")
     @Expose
-    private String postcode;
+    @Builder.Default
+    private String postcode= "DEFAULT";
     @SerializedName("city")
     @Expose
-    private String city;
+    @Builder.Default
+    private String city= "DEFAULT";
     @SerializedName("state")
     @Expose
-    private String state;
+    @Builder.Default
+    private String state= "DEFAULT";
     @SerializedName("country")
     @Expose
-    private String country;
+    @Builder.Default
+    private String country= "US";
     @SerializedName("tags")
     @Expose
-    private List<String> tags;
+    @Builder.Default
+    private List<String> tags = new ArrayList<>();
     @Serial
     private final static long serialVersionUID = 6294356973643074561L;
 }

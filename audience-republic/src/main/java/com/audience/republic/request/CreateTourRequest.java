@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.joda.time.DateTime;
 
 import java.io.Serial;
@@ -18,20 +19,24 @@ public class CreateTourRequest implements Serializable {
     private String id;
     @SerializedName("name")
     @Expose
-    private String name;
+    @Builder.Default
+    private String name = "DEFAULT";
     @SerializedName("description")
     @Expose
-    private String description;
+    @Builder.Default
+    private String description = "DEFAULT";
     @SerializedName("start-date")
     @Expose
-    private DateTime startDate;
+    @Builder.Default
+    private DateTime startDate = DateTime.now();
     @SerializedName("end-date")
     @Expose
-    private DateTime endDate;
+    @Builder.Default
+    private DateTime endDate = DateTime.now();
     @SerializedName("url")
     @Expose
-    private String url;
+    @Builder.Default
+    private String url = "https://www.eventliveus.com";
     @Serial
     private final static long serialVersionUID = 6102102124819160968L;
-
 }

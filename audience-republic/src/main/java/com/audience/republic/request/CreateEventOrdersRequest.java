@@ -8,6 +8,7 @@ import org.joda.time.DateTime;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -19,7 +20,8 @@ public class CreateEventOrdersRequest implements Serializable {
     private String id;
     @SerializedName("purchase-date")
     @Expose
-    private DateTime purchaseDate;
+    @Builder.Default
+    private DateTime purchaseDate = DateTime.now();
     @SerializedName("purchaser")
     @Expose
     private CreateContactsRequest purchaser;
@@ -28,25 +30,31 @@ public class CreateEventOrdersRequest implements Serializable {
     private String purchaserId;
     @SerializedName("currency")
     @Expose
-    private String currency;
+    @Builder.Default
+    private String currency = "USD";
     @SerializedName("total")
     @Expose
-    private Integer total;
+    @Builder.Default
+    private Integer total = 0;
     @SerializedName("fees")
     @Expose
-    private Integer fees;
+    @Builder.Default
+    private Integer fees = 0;
     @SerializedName("taxes")
     @Expose
-    private Integer taxes;
+    @Builder.Default
+    private Integer taxes = 0;
     @SerializedName("status")
     @Expose
-    private String status;
+    @Builder.Default
+    private String status = "completed";
     @SerializedName("event-id")
     @Expose
     private String eventId;
     @SerializedName("tickets")
     @Expose
-    private List<CreateTicketsRequest> tickets;
+    @Builder.Default
+    private List<CreateTicketsRequest> tickets = new ArrayList<>();
     @Serial
     private final static long serialVersionUID = -7409045530739674678L;
 }

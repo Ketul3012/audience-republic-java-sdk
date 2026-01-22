@@ -19,7 +19,8 @@ public class CreateMailingListRequest implements Serializable {
     private String name;
     @SerializedName("contact-ids")
     @Expose
-    private List<String> contactIds;
+    @Builder.Default
+    private List<String> contactIds = new ArrayList<>();
     @Serial
     private final static long serialVersionUID = -1861066867766644585L;
 
