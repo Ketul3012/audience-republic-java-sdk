@@ -18,7 +18,7 @@ repositories {
 }
 
 group = 'com.audience'
-version = '1.10.1'
+version = '1.10.2'
 description = 'Java SDK to interact with Audience Republic API'
 
 dependencies {
