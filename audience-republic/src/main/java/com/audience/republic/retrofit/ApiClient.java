@@ -2,6 +2,7 @@ package com.audience.republic.retrofit;
 
 import com.audience.republic.retrofit.service.ApiService;
 import com.audience.republic.enums.AudienceRepublicVersions;
+import com.audience.republic.enums.LogLevel;
 import com.google.gson.*;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -20,6 +21,10 @@ import java.lang.reflect.Type;
 public class ApiClient {
 
     public static ApiService getClient(AudienceRepublicVersions audienceRepublicVersions, String token) {
+        return getClient(audienceRepublicVersions, token, false, LogLevel.INFO);
+    }
+
+    public static ApiService getClient(AudienceRepublicVersions audienceRepublicVersions, String token, boolean enableLogging, LogLevel logLevel) {
         // Interceptor to add the token to the header
         Interceptor tokenInterceptor = new Interceptor() {
             @Override
@@ -32,9 +37,16 @@ public class ApiClient {
             }
         };
 
-        OkHttpClient client = new OkHttpClient.Builder()
-                .addInterceptor(tokenInterceptor)
-                .build();
+        OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder()
+                .addInterceptor(tokenInterceptor);
+
+        // Add logging interceptor if logging is enabled
+        if (enableLogging) {
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(enableLogging, logLevel);
+            clientBuilder.addInterceptor(loggingInterceptor);
+        }
+
+        OkHttpClient client = clientBuilder.build();
 
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(DateTime.class, (JsonSerializer<DateTime>) (dateTime, typeOfSrc, context) -> new JsonPrimitive(ISODateTimeFormat.dateTime().print(dateTime)))
@@ -42,8 +54,7 @@ public class ApiClient {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(audienceRepublicVersions.getValue())
                 .client(client)
-                .addConverterFactory(        GsonConverterFactory.create(gson)
-                )
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
         return retrofit.create(ApiService.class);
