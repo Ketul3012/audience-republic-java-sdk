@@ -31,6 +31,7 @@ import com.audience.republic.retrofit.ApiClient;
 import com.audience.republic.retrofit.service.ApiService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 
 import retrofit2.Response;
 
@@ -287,6 +288,8 @@ class AudienceRepublicServiceImpl implements AudienceRepublicService {
 
     /**
      * Parses error response based on HTTP status code.
+     * Returns the parsed object if successful, or the raw error body string if
+     * parsing fails.
      */
     private Object parseErrorResponse(Response<?> response) {
         if (response.errorBody() == null) {
@@ -302,24 +305,44 @@ class AudienceRepublicServiceImpl implements AudienceRepublicService {
                     // 400 returns plain text "Bad request."
                     return errorBodyString;
                 case 401:
-                    return gson.fromJson(errorBodyString, Response401.class);
+                    return parseJsonSafely(errorBodyString, Response401.class, statusCode);
                 case 403:
-                    return gson.fromJson(errorBodyString, Response403.class);
+                    return parseJsonSafely(errorBodyString, Response403.class, statusCode);
                 case 404:
-                    return gson.fromJson(errorBodyString, Response404.class);
+                    return parseJsonSafely(errorBodyString, Response404.class, statusCode);
                 case 422:
-                    return gson.fromJson(errorBodyString, Response422.class);
+                    return parseJsonSafely(errorBodyString, Response422.class, statusCode);
                 case 500:
-                    return gson.fromJson(errorBodyString, Response500.class);
+                    return parseJsonSafely(errorBodyString, Response500.class, statusCode);
                 case 503:
-                    return gson.fromJson(errorBodyString, Response503.class);
+                    return parseJsonSafely(errorBodyString, Response503.class, statusCode);
                 default:
                     // For other status codes, return the raw error body string
                     return errorBodyString;
             }
         } catch (IOException e) {
-            logger.log(Level.WARNING, "Failed to parse error response body: {0}", e.getMessage());
+            logger.log(Level.WARNING, "Failed to read error response body: {0}", e.getMessage());
             return null;
+        }
+    }
+
+    /**
+     * Safely parses JSON string to the specified type.
+     * If parsing fails, returns the raw string instead of throwing an exception.
+     */
+    private Object parseJsonSafely(String jsonString, Class<?> targetClass, int statusCode) {
+        try {
+            return gson.fromJson(jsonString, targetClass);
+        } catch (JsonSyntaxException e) {
+            logger.log(Level.WARNING,
+                    "Failed to parse error response for status {0} as {1}. Using raw response body. Error: {2}",
+                    new Object[] { statusCode, targetClass.getSimpleName(), e.getMessage() });
+            return jsonString;
+        } catch (Exception e) {
+            logger.log(Level.WARNING,
+                    "Unexpected error parsing error response for status {0} as {1}. Using raw response body. Error: {2}",
+                    new Object[] { statusCode, targetClass.getSimpleName(), e.getMessage() });
+            return jsonString;
         }
     }
 
@@ -399,11 +422,19 @@ class AudienceRepublicServiceImpl implements AudienceRepublicService {
             logMessage.append(" | Failed after: ").append(elapsedTime).append("ms");
 
             if (errorResponse != null) {
-                try {
-                    String jsonError = gson.toJson(errorResponse);
-                    logMessage.append("\nError Response Body:\n").append(jsonError);
-                } catch (Exception e) {
-                    logMessage.append(" | Error Response: <unable to serialize>");
+                // If errorResponse is already a String, use it directly
+                if (errorResponse instanceof String) {
+                    logMessage.append("\nError Response Body:\n").append(errorResponse);
+                } else {
+                    // Try to serialize the object to JSON
+                    try {
+                        String jsonError = gson.toJson(errorResponse);
+                        logMessage.append("\nError Response Body:\n").append(jsonError);
+                    } catch (Exception e) {
+                        // If serialization fails, log the toString() representation
+                        logMessage.append("\nError Response Body (raw):\n").append(errorResponse.toString());
+                        logger.log(Level.WARNING, "Failed to serialize error response to JSON: {0}", e.getMessage());
+                    }
                 }
             } else {
                 logMessage.append(" | Error Response: null");
