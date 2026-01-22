@@ -1,19 +1,25 @@
 package com.audience.republic.request;
 
-import com.audience.republic.enums.GenderTypes;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import lombok.Builder;
-import lombok.Data;
-import org.joda.time.DateTime;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.joda.time.DateTime;
+
+import com.audience.republic.enums.GenderTypes;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreateContactsRequest implements Serializable {
 
     @SerializedName("id")
@@ -38,11 +44,11 @@ public class CreateContactsRequest implements Serializable {
     @SerializedName("mobile-number")
     @Expose
     @Builder.Default
-    private String mobileNumber= "DEFAULT";
+    private String mobileNumber = "DEFAULT";
     @SerializedName("email-address")
     @Expose
     @Builder.Default
-    private String emailAddress= "DEFAULT";
+    private String emailAddress = "DEFAULT";
     @SerializedName("marketing-opt-in")
     @Expose
     @Builder.Default
@@ -50,27 +56,27 @@ public class CreateContactsRequest implements Serializable {
     @SerializedName("street-address")
     @Expose
     @Builder.Default
-    private String streetAddress= "DEFAULT";
+    private String streetAddress = "DEFAULT";
     @SerializedName("suburb")
     @Expose
     @Builder.Default
-    private String suburb= "DEFAULT";
+    private String suburb = "DEFAULT";
     @SerializedName("postcode")
     @Expose
     @Builder.Default
-    private String postcode= "DEFAULT";
+    private String postcode = "DEFAULT";
     @SerializedName("city")
     @Expose
     @Builder.Default
-    private String city= "DEFAULT";
+    private String city = "DEFAULT";
     @SerializedName("state")
     @Expose
     @Builder.Default
-    private String state= "DEFAULT";
+    private String state = "DEFAULT";
     @SerializedName("country")
     @Expose
     @Builder.Default
-    private String country= "US";
+    private String country = "US";
     @SerializedName("tags")
     @Expose
     @Builder.Default

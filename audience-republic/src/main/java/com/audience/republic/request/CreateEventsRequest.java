@@ -2,8 +2,10 @@ package com.audience.republic.request;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.joda.time.DateTime;
 
 import java.io.Serial;
@@ -14,6 +16,8 @@ import java.util.List;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreateEventsRequest implements Serializable {
 
     @SerializedName("id")
@@ -26,7 +30,7 @@ public class CreateEventsRequest implements Serializable {
     @SerializedName("description")
     @Expose
     @Builder.Default
-    private String description= "DEFAULT";
+    private String description = "DEFAULT";
     @SerializedName("start-date")
     @Expose
     @Builder.Default
