@@ -1,15 +1,18 @@
 package com.audience.republic;
 
-import com.audience.republic.request.*;
+import java.io.IOException;
+import java.util.List;
+
+import com.audience.republic.request.CreateContactsRequest;
+import com.audience.republic.request.CreateEventOrdersRequest;
+import com.audience.republic.request.CreateEventsRequest;
+import com.audience.republic.request.CreateMailingListRequest;
+import com.audience.republic.request.CreateTicketOrdersRequest;
+import com.audience.republic.request.CreateTicketsClassRequest;
+import com.audience.republic.request.CreateTicketsRequest;
 import com.audience.republic.response.CreateMailingListResponse;
 import com.audience.republic.response.StatusResponse;
 import com.audience.republic.response.SuccessResponse;
-import retrofit2.http.Body;
-import retrofit2.http.POST;
-import retrofit2.http.Query;
-
-import java.io.IOException;
-import java.util.List;
 
 public interface AudienceRepublicService {
 
@@ -17,7 +20,8 @@ public interface AudienceRepublicService {
 
     SuccessResponse createContacts(List<CreateContactsRequest> createContactsRequests) throws IOException;
 
-    CreateMailingListResponse createMailingList(CreateMailingListRequest createMailingListRequest) throws IOException;
+    CreateMailingListResponse createMailingList(CreateMailingListRequest createMailingListRequest)
+            throws IOException;
 
     SuccessResponse createEvents(List<CreateEventsRequest> requests) throws IOException;
 

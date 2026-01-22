@@ -9,14 +9,11 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 
 public class ApiClient {
 
@@ -37,16 +34,9 @@ public class ApiClient {
             }
         };
 
-        OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder()
-                .addInterceptor(tokenInterceptor);
-
-        // Add logging interceptor if logging is enabled
-        if (enableLogging) {
-            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(enableLogging, logLevel);
-            clientBuilder.addInterceptor(loggingInterceptor);
-        }
-
-        OkHttpClient client = clientBuilder.build();
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(tokenInterceptor)
+                .build();
 
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(DateTime.class, (JsonSerializer<DateTime>) (dateTime, typeOfSrc, context) -> new JsonPrimitive(ISODateTimeFormat.dateTime().print(dateTime)))
