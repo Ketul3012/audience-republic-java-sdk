@@ -1,6 +1,14 @@
-# Audience Republic SDK License (Commercial Threshold + Profit Sharing)
+# Audience Republic SDK License (Commercial Threshold + Mandatory Profit Sharing)
 
 Copyright (c) 2026 Ketul Patel
+
+---
+
+## 0. Acceptance and Authority to Bind
+
+By downloading, installing, copying, modifying, distributing, accessing, or using the Software, the User agrees to be bound by this license.
+
+If the User is an individual acting on behalf of a company or other legal entity, that individual represents and warrants they have authority to bind that entity, and "User" includes that entity.
 
 ---
 
@@ -11,7 +19,8 @@ Copyright (c) 2026 Ketul Patel
 * **"User"** refers to any individual or entity using the Software.
 * **"Revenue"** refers to total gross annual revenue of the User (or their organization), regardless of source.
 * **"Commercial Use"** means any use of the Software in connection with a product, service, or activity that generates revenue directly or indirectly.
-* **"Profit"** refers to net profit derived from products or services that incorporate or depend on the Software.
+* **"Net Profit"** means gross revenue actually received from a product or service that incorporates or depends on the Software, minus direct, documented, and reasonable costs attributable to delivering that specific product or service (excluding unrelated overhead, intercompany transfer pricing manipulation, and non-cash accounting adjustments).
+* **"Profit Share Rate"** means **4% of Net Profit** unless replaced by a higher rate in a signed written agreement between User and Licensor.
 
 ---
 
@@ -26,27 +35,32 @@ Under these conditions, the Software may be used free of charge.
 
 ---
 
-## 3. Commercial Use Requirements
+## 3. Commercial Use Requirements (Binding)
 
 If **any** of the following conditions are met:
 
 * The User's annual revenue is **equal to or greater than USD $1,000,000**, OR
-* The Software is used as part of a **commercial product or service generating revenue**,
+* The Software is used by a **for-profit company** as part of any commercial product, service, or internal revenue-generating activity,
 
 THEN the User MUST:
 
-### 3.1 Obtain a Commercial License
+### 3.1 Mandatory Profit Sharing
 
-The User must enter into a separate **Commercial License Agreement** with the Licensor.
+The User must pay the Licensor the Profit Share Rate on Net Profit from each covered product or service.
 
-### 3.2 Profit Sharing Obligation
+### 3.2 Reporting and Payment Terms
 
-The User agrees to:
+The User must:
 
-* Share **a percentage of profits** derived from the Software or products/services that depend on it.
-* The exact percentage and terms shall be defined in the Commercial License Agreement.
+* Deliver a quarterly statement of calculation for Net Profit and profit share owed within 30 days after each calendar quarter end.
+* Pay all amounts due within 30 days after each calendar quarter end.
+* Keep complete and accurate books and records related to Net Profit calculations for at least 5 years.
 
-Until such agreement is executed, **no rights are granted for commercial use** under this license.
+Late payments accrue interest at the lesser of 1.5% per month or the maximum rate permitted by law.
+
+### 3.3 Optional Commercial Agreement
+
+The parties may execute a separate Commercial License Agreement with different economics, but unless and until such agreement is signed, this Section 3 applies by default.
 
 ---
 
@@ -54,9 +68,10 @@ Until such agreement is executed, **no rights are granted for commercial use** u
 
 The User may NOT:
 
-* Use the Software commercially if revenue exceeds the threshold without a valid Commercial License.
+* Use the Software commercially while failing to comply with Section 3 payment and reporting obligations.
 * Sub-license, sell, or offer the Software as a standalone commercial product without permission.
 * Circumvent or attempt to avoid the revenue threshold requirement through restructuring or indirect usage.
+* Falsify, conceal, or manipulate records used to compute Net Profit or profit share.
 
 ---
 
@@ -65,7 +80,7 @@ The User may NOT:
 This license is automatically terminated if:
 
 * The User fails to comply with any terms of this license, OR
-* The User engages in Commercial Use without obtaining a Commercial License when required.
+* The User engages in Commercial Use and fails to pay required profit sharing or provide required reports.
 
 Upon termination, the User must immediately:
 
@@ -82,6 +97,8 @@ The Licensor reserves the right to:
 * Conduct audits with reasonable notice.
 
 Failure to comply with audit requests constitutes a breach of this license.
+
+If an audit reveals an underpayment of more than 5% for any audited period, the User must promptly pay the underpaid amount, accrued interest, and reasonable audit costs.
 
 ---
 
@@ -105,9 +122,29 @@ IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABIL
 
 ---
 
-## 9. Governing Law
+## 9. Governing Law and Worldwide Applicability
+
+This license applies worldwide to all Users, companies, and uses of the Software, regardless of country, place of incorporation, or place of operation.
 
 This license shall be governed by and construed in accordance with the laws of the jurisdiction in which the Licensor resides.
+
+To the maximum extent permitted by law, the User consents to exclusive venue and jurisdiction in the competent courts of that jurisdiction.
+
+### 9.1 Enforcement and Remedies
+
+The User acknowledges that any breach of Sections 3, 4, 5, or 6 may cause irreparable harm to the Licensor for which monetary damages alone may be inadequate.
+
+Accordingly, the Licensor is entitled, in addition to any other remedies available at law or in equity, to seek immediate injunctive or equitable relief (including temporary, preliminary, and permanent relief) in any court of competent jurisdiction.
+
+To the maximum extent permitted by applicable law, the prevailing party in any action or proceeding to enforce this license is entitled to recover reasonable legal fees, court costs, and enforcement expenses, including reasonable cross-border collection costs.
+
+### 9.2 User-Borne Costs and Net Payments
+
+For any Commercial Use, the User is solely responsible for all costs, charges, taxes, duties, transfer fees, banking fees, withholding obligations, audit expenses, legal expenses, and collection expenses arising from or related to this license, profit sharing, reporting, payment, enforcement, and compliance.
+
+All amounts payable to the Licensor must be paid in full, without setoff, deduction, counterclaim, or withholding, except where withholding is required by mandatory law. If withholding is required, the User must gross up the payment so the Licensor receives the full amount that would have been received absent withholding.
+
+The Licensor has no obligation to bear, reimburse, or share any such costs.
 
 ---
 
@@ -123,7 +160,7 @@ ketulpatel3012@gmail.com
 ## 11. Summary (Non-Legal)
 
 * Free if revenue < $1M
-* Paid + profit sharing if revenue ≥ $1M
+* Mandatory 4% profit sharing for for-profit commercial use worldwide
 * Unauthorized commercial use = violation
 
 (This summary is for convenience only and not legally binding.)

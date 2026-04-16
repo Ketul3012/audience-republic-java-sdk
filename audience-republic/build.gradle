@@ -18,7 +18,7 @@ repositories {
 }
 
 group = 'com.audience'
-version = '1.10.2'
+version = '1.10.3'
 description = 'Java SDK to interact with Audience Republic API'
 
 dependencies {
@@ -55,8 +55,9 @@ publishing {
 
                 licenses {
                     license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'https://www.apache.org/licenses/LICENSE-2.0'
+                        name = 'Audience Republic SDK License (Commercial Threshold + Mandatory Profit Sharing)'
+                        url = 'https://github.com/Ketul3012/audience-republic-java-sdk/blob/main/LICENSE'
+                        distribution = 'repo'
                     }
                 }
                 developers {
