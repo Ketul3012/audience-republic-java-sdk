@@ -1,166 +1,162 @@
-# Audience Republic SDK License (Commercial Threshold + Mandatory Profit Sharing)
+# Audience Republic SDK License
 
 Copyright (c) 2026 Ketul Patel
 
----
-
 ## 0. Acceptance and Authority to Bind
 
-By downloading, installing, copying, modifying, distributing, accessing, or using the Software, the User agrees to be bound by this license.
+By downloading, installing, copying, accessing, using, modifying, or distributing the Software, the User agrees to be bound by this License.
 
-If the User is an individual acting on behalf of a company or other legal entity, that individual represents and warrants they have authority to bind that entity, and "User" includes that entity.
-
----
+If an individual accepts this License or uses the Software on behalf of a company or other legal entity, that individual represents and warrants that they have authority to bind that entity. In that case, the term "User" includes that entity.
 
 ## 1. Definitions
 
-* **"Software"** refers to the Audience Republic Java SDK and all associated source code, documentation, and related materials.
-* **"Licensor"** refers to Ketul Patel.
-* **"User"** refers to any individual or entity using the Software.
-* **"Revenue"** refers to total gross annual revenue of the User (or their organization), regardless of source.
-* **"Commercial Use"** means any use of the Software in connection with a product, service, or activity that generates revenue directly or indirectly.
-* **"Net Profit"** means gross revenue actually received from a product or service that incorporates or depends on the Software, minus direct, documented, and reasonable costs attributable to delivering that specific product or service (excluding unrelated overhead, intercompany transfer pricing manipulation, and non-cash accounting adjustments).
-* **"Profit Share Rate"** means **4% of Net Profit** unless replaced by a higher rate in a signed written agreement between User and Licensor.
+For purposes of this License:
 
----
+- "Affiliate" means any entity that directly or indirectly controls, is controlled by, or is under common control with a party.
+- "Commercial Use" means any use of the Software in connection with a product, service, or activity that directly or indirectly generates revenue or supports a for-profit business activity.
+- "Licensor" means Ketul Patel.
+- "Net Profit" means gross revenue actually received from a product or service that incorporates, requires, or materially depends on the Software, minus direct, documented, and reasonable costs attributable to delivering that specific product or service. Net Profit excludes unrelated overhead, intercompany transfer-pricing arrangements, non-cash accounting adjustments, and other allocations not directly tied to that product or service.
+- "Profit Share Rate" means 4% of Net Profit unless a different rate is expressly stated in a separate written agreement signed by both the User and the Licensor.
+- "Revenue" means the total gross annual revenue of the User or, where applicable, the User's organization, from all sources.
+- "Software" means the Audience Republic Java SDK and all associated source code, object code, documentation, and related materials made available by the Licensor.
+- "User" means any individual or legal entity that accesses, uses, copies, modifies, or distributes the Software.
 
-## 2. Grant of License (Free Tier)
+## 2. License Grant; Free Tier
 
-Permission is hereby granted to use, copy, modify, and distribute the Software under the following conditions:
+Subject to the terms of this License, the Licensor grants the User a non-exclusive, non-transferable, revocable license to use, copy, modify, and distribute the Software without charge only if all of the following conditions are continuously satisfied:
 
-* The User's total annual revenue is **less than USD $1,000,000**, AND
-* The Software is not used in a manner that competes directly with the Licensor's business offerings (if applicable).
+- the User's Revenue is less than USD $1,000,000; and
+- the Software is not used in a manner that directly competes with the Licensor's business offerings, if any.
 
-Under these conditions, the Software may be used free of charge.
+If either condition is not satisfied, the free tier does not apply and Section 3 governs the User's rights and obligations.
 
----
+The User bears sole responsibility for determining, documenting, and proving its eligibility for the free tier. No right to engage in Commercial Use is granted except as expressly provided in Section 3 or in a separate written agreement signed by both parties.
 
-## 3. Commercial Use Requirements (Binding)
+## 3. Commercial Use Requirements
 
-If **any** of the following conditions are met:
+If any of the following conditions applies:
 
-* The User's annual revenue is **equal to or greater than USD $1,000,000**, OR
-* The Software is used by a **for-profit company** as part of any commercial product, service, or internal revenue-generating activity,
+- the User's Revenue is equal to or greater than USD $1,000,000; or
+- the Software is used by, for, or on behalf of a for-profit company or any of its Affiliates in connection with any commercial product, commercial service, or internal revenue-generating activity,
 
-THEN the User MUST:
+then the User may engage in that Commercial Use only in compliance with this Section 3.
 
-### 3.1 Mandatory Profit Sharing
+### 3.1 Profit Sharing
 
-The User must pay the Licensor the Profit Share Rate on Net Profit from each covered product or service.
+The User must pay the Licensor the Profit Share Rate on Net Profit derived from each product or service that incorporates, requires, or materially depends on the Software.
 
-### 3.2 Reporting and Payment Terms
+The User bears the burden of substantiating every deduction, exclusion, allocation, and adjustment used to calculate Net Profit. Any deduction, exclusion, allocation, or adjustment that is not adequately documented to the Licensor's reasonable satisfaction may be disregarded in determining Net Profit.
 
-The User must:
+### 3.2 Reporting, Records, and Payment
 
-* Deliver a quarterly statement of calculation for Net Profit and profit share owed within 30 days after each calendar quarter end.
-* Pay all amounts due within 30 days after each calendar quarter end.
-* Keep complete and accurate books and records related to Net Profit calculations for at least 5 years.
+For each calendar quarter in which Commercial Use occurs, the User must:
 
-Late payments accrue interest at the lesser of 1.5% per month or the maximum rate permitted by law.
+- provide the Licensor, within 30 days after the end of that quarter, a reasonably detailed written statement, certified by an authorized officer, manager, or equivalent representative of the User as accurate and complete in all material respects, showing the calculation of Net Profit and the amount owed under Section 3.1;
+- pay all amounts due in immediately available funds in USD within 30 days after the end of that quarter; and
+- maintain complete and accurate books and records sufficient to verify Net Profit calculations and amounts payable under this License for at least 5 years.
 
-### 3.3 Optional Commercial Agreement
+Any late payment accrues interest at the lesser of 1.5% per month and the maximum rate permitted by applicable law.
 
-The parties may execute a separate Commercial License Agreement with different economics, but unless and until such agreement is signed, this Section 3 applies by default.
+### 3.3 Alternative Commercial Agreement
 
----
+The User and the Licensor may enter into a separate written commercial license agreement that replaces some or all of this Section 3. Unless and until such an agreement is signed by both parties, this Section 3 applies in full.
 
 ## 4. Restrictions
 
-The User may NOT:
+The User must not:
 
-* Use the Software commercially while failing to comply with Section 3 payment and reporting obligations.
-* Sub-license, sell, or offer the Software as a standalone commercial product without permission.
-* Circumvent or attempt to avoid the revenue threshold requirement through restructuring or indirect usage.
-* Falsify, conceal, or manipulate records used to compute Net Profit or profit share.
-
----
+- engage in Commercial Use of the Software without complying with Section 3;
+- sell, sublicense, or offer the Software as a standalone commercial product without the Licensor's prior written permission;
+- use the Software through an Affiliate, contractor, outsourcer, reseller, intermediary, or other third party in a manner intended to avoid or reduce obligations under this License;
+- attempt to evade the Revenue threshold or the obligations in Section 3 through restructuring, affiliate arrangements, indirect use, pass-through arrangements, or similar means; or
+- falsify, conceal, omit, or manipulate records or information relevant to determining Revenue, Net Profit, or amounts payable under this License.
 
 ## 5. Termination
 
-This license is automatically terminated if:
+This License automatically terminates if:
 
-* The User fails to comply with any terms of this license, OR
-* The User engages in Commercial Use and fails to pay required profit sharing or provide required reports.
+- the User breaches any provision of this License; or
+- the User engages in Commercial Use and fails to comply with applicable reporting or payment obligations under Section 3.
 
 Upon termination, the User must immediately:
 
-* Cease all use of the Software
-* Delete all copies of the Software
+- cease all use of the Software; and
+- delete or destroy all copies of the Software in the User's possession or control.
 
----
+Termination does not limit any rights or remedies available to the Licensor arising from conduct that occurred before termination.
+Sections 3, 4, 5, 6, 7, 8, 9, and 10 survive termination to the extent necessary to enforce accrued rights, payment obligations, audit rights, restrictions, and remedies.
 
-## 6. Audit Rights
+## 6. Audit and Verification
 
-The Licensor reserves the right to:
+The Licensor may, upon reasonable notice, request documentation reasonably necessary to verify the User's compliance with this License, including compliance with Revenue thresholds and payment obligations. The Licensor may also conduct a reasonable audit of the relevant books and records.
 
-* Request reasonable documentation to verify compliance with revenue thresholds and usage terms.
-* Conduct audits with reasonable notice.
+The User must provide requested documentation and supporting records within 10 business days after request unless the Licensor agrees otherwise in writing.
 
-Failure to comply with audit requests constitutes a breach of this license.
+Failure to cooperate with a reasonable audit or verification request constitutes a breach of this License.
 
-If an audit reveals an underpayment of more than 5% for any audited period, the User must promptly pay the underpaid amount, accrued interest, and reasonable audit costs.
+If an audit reveals an underpayment of more than 5% for any audited period, the User must promptly pay:
 
----
+- the underpaid amount;
+- accrued interest; and
+- the Licensor's reasonable audit costs.
+
+Any amount found due following an audit or verification must be paid within 10 business days after notice.
 
 ## 7. Disclaimer of Warranty
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
-
-* MERCHANTABILITY
-* FITNESS FOR A PARTICULAR PURPOSE
-* NON-INFRINGEMENT
-
----
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
 
 ## 8. Limitation of Liability
 
-IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM:
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF REVENUE, PROFITS, DATA, BUSINESS, OR GOODWILL, ARISING OUT OF OR RELATING TO THE SOFTWARE OR THIS LICENSE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-* USE OF THE SOFTWARE
-* INABILITY TO USE THE SOFTWARE
-* ANY COMMERCIAL LOSSES
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR'S TOTAL LIABILITY ARISING OUT OF OR RELATING TO THE SOFTWARE OR THIS LICENSE WILL NOT EXCEED USD $100.
 
----
+## 9. Governing Law; Venue; Enforcement
 
-## 9. Governing Law and Worldwide Applicability
+This License applies worldwide.
 
-This license applies worldwide to all Users, companies, and uses of the Software, regardless of country, place of incorporation, or place of operation.
+This License is governed by and construed in accordance with the laws of the jurisdiction in which the Licensor resides, without regard to conflict-of-laws principles.
 
-This license shall be governed by and construed in accordance with the laws of the jurisdiction in which the Licensor resides.
+To the maximum extent permitted by applicable law, the User consents to the exclusive jurisdiction and venue of the competent courts in that jurisdiction.
 
-To the maximum extent permitted by law, the User consents to exclusive venue and jurisdiction in the competent courts of that jurisdiction.
+### 9.1 Equitable Relief and Recovery Costs
 
-### 9.1 Enforcement and Remedies
+The User acknowledges that a breach of Sections 3, 4, 5, or 6 may cause irreparable harm to the Licensor for which monetary damages alone may be inadequate. Accordingly, the Licensor may seek injunctive, equitable, or other provisional relief in any court of competent jurisdiction, in addition to any other remedies available at law or in equity.
 
-The User acknowledges that any breach of Sections 3, 4, 5, or 6 may cause irreparable harm to the Licensor for which monetary damages alone may be inadequate.
+To the maximum extent permitted by applicable law, the User waives any requirement that the Licensor post a bond or similar security in connection with seeking equitable or injunctive relief.
 
-Accordingly, the Licensor is entitled, in addition to any other remedies available at law or in equity, to seek immediate injunctive or equitable relief (including temporary, preliminary, and permanent relief) in any court of competent jurisdiction.
+To the maximum extent permitted by applicable law, the prevailing party in any action to enforce this License is entitled to recover its reasonable legal fees, court costs, and enforcement expenses, including reasonable cross-border collection costs.
 
-To the maximum extent permitted by applicable law, the prevailing party in any action or proceeding to enforce this license is entitled to recover reasonable legal fees, court costs, and enforcement expenses, including reasonable cross-border collection costs.
+### 9.2 Taxes, Fees, Withholding, and Net Payments
 
-### 9.2 User-Borne Costs and Net Payments
+For any Commercial Use, the User is solely responsible for all taxes, duties, transfer fees, banking fees, withholding obligations, audit expenses, legal expenses, collection expenses, and similar costs arising out of or relating to this License, compliance with this License, or any amounts payable under this License.
 
-For any Commercial Use, the User is solely responsible for all costs, charges, taxes, duties, transfer fees, banking fees, withholding obligations, audit expenses, legal expenses, and collection expenses arising from or related to this license, profit sharing, reporting, payment, enforcement, and compliance.
+All amounts payable to the Licensor must be paid in full, without setoff, deduction, counterclaim, or withholding, except to the extent withholding is required by mandatory law. If withholding is required by mandatory law, the User must gross up the payment so that the Licensor receives the full amount that would have been received absent that withholding.
 
-All amounts payable to the Licensor must be paid in full, without setoff, deduction, counterclaim, or withholding, except where withholding is required by mandatory law. If withholding is required, the User must gross up the payment so the Licensor receives the full amount that would have been received absent withholding.
+## 10. Miscellaneous
 
-The Licensor has no obligation to bear, reimburse, or share any such costs.
+If any provision of this License is held unenforceable, that provision will be enforced to the maximum extent permitted by law and the remaining provisions will remain in full force and effect.
 
----
+No failure or delay by the Licensor in exercising any right under this License will operate as a waiver of that right.
 
-## 10. Contact
+The User may not assign, delegate, transfer, or novate this License or any rights or obligations under it, whether by operation of law, merger, sale of assets, change of control, or otherwise, without the Licensor's prior written consent. Any attempted assignment or transfer in violation of this sentence is void.
+
+Except for the limited rights expressly granted in this License, no other rights or licenses are granted, whether by implication, estoppel, exhaustion, or otherwise.
+
+This License constitutes the entire agreement between the Licensor and the User concerning the Software, except to the extent superseded by a separate written agreement signed by both parties.
+
+## 11. Contact
 
 For commercial licensing inquiries, contact:
 
-Ketul Patel
-ketulpatel3012@gmail.com
+Ketul Patel  
+[ketulpatel3012@gmail.com](mailto:ketulpatel3012@gmail.com)
 
----
+## 12. Summary (Non-Binding Convenience Summary)
 
-## 11. Summary (Non-Legal)
+- Free if Revenue is under USD $1,000,000 and the use does not directly compete with the Licensor's business offerings.
+- Commercial Use by larger or for-profit users requires compliance with the 4% profit-sharing terms unless a separate signed commercial agreement says otherwise.
+- Unauthorized Commercial Use is a breach of the License.
 
-* Free if revenue < $1M
-* Mandatory 4% profit sharing for for-profit commercial use worldwide
-* Unauthorized commercial use = violation
-
-(This summary is for convenience only and not legally binding.)
+This summary is provided solely for convenience. It does not modify this License and is not legally binding. If there is any inconsistency between this summary and the rest of this License, the rest of this License controls.
